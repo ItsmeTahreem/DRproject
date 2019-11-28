@@ -1,0 +1,20 @@
+<mat-accordion *ngFor="let show of MyShows">
+    <mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <h3> {{ show.name }} </h3><br>
+                
+            </mat-panel-title>
+
+            <mat-panel-description>
+                <h3> {{ show.desc }} </h3>
+            </mat-panel-description>
+           
+    </mat-expansion-panel-header>
+        <mat-action-row>
+            <button mat-button [routerLink]="['/edit', show._id]" color="primary">EDIT</button>
+
+            <button mat-button (click)="onDelete(show._id)" color="warn">DELETE</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+</mat-accordion>

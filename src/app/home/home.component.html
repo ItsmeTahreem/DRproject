@@ -1,0 +1,75 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+
+<ngb-carousel #mycarousel
+(slide)="onSlide($event)"
+[showNavigationArrows]="true" 
+[showNavigationIndicators]="true"
+interval="1500"
+[keyboard]="true"
+[pauseOnHover]="true"
+[wrap]="true"
+[activeId]="'slideTwo'"
+
+>
+        <ng-template ngbSlide #slide let-slide>
+            <div class="picsum-img-wrapper img-style">
+                <img src="./assets/images/glee.jpg" alt="Random first slide">
+            </div>
+            
+        </ng-template>
+        <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                        <img src="./assets/images/friends.jpg" alt="Random first slide">
+                    </div>
+                    
+        </ng-template>
+        <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                        <img src="./assets/images/bigbang.jpg" alt="Random first slide">
+                    </div>
+                   
+        </ng-template>
+        <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                        <img src="./assets/images/friends.jpg" alt="Random first slide">
+                    </div>
+                   
+        </ng-template>
+        <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                        <img src="./assets/images/lost.jpg" alt="Random first slide">
+                    </div>
+                    
+
+
+                    <ng-template ngbSlide>
+                            <div class="picsum-img-wrapper">
+                                    <img src="./assets/images/mother.jpg" alt="Random first slide">
+                                </div>
+                                
+                    </ng-template>
+
+                    <ng-template ngbSlide>
+                            <div class="picsum-img-wrapper">
+                                    <img src="./assets/images/power.jpg" alt="Random first slide">
+                                </div>
+                               
+                    </ng-template>
+
+                    <ng-template ngbSlide>
+                            <div class="picsum-img-wrapper">
+                                    <img src="./assets/images/stranger.jpeg" alt="Random first slide">
+                                </div>
+                               
+                    </ng-template>
+        </ng-template>
+
+
+
+
+    </ngb-carousel >
+
+   
+
+<button (click)="moveNext()">Next</button>
+<button (click)="getPrev()">Prev</button>

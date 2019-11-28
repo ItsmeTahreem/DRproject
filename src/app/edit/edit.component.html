@@ -1,0 +1,16 @@
+<mat-card>
+    <form (submit)="onEditShow(showForm)" #showForm="ngForm">
+        <mat-form-field>
+            <label> Show Name:</label>
+            <input matInput type="text" name="name" ngModel={{show.name}} required #title="ngModel">
+        </mat-form-field>
+
+        <mat-form-field>
+            <label> Show Desc:</label>
+            <input matInput type="text" name="desc" ngModel={{show.desc}} required #content="ngModel">
+        </mat-form-field>
+    
+
+        <button mat-raised-button color="accent" type="submit">Edit Show</button>
+    </form>
+</mat-card>
