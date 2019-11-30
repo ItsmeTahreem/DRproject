@@ -10,6 +10,27 @@
         <input matInput type="text" name="desc" ngModel required #title="ngModel">
       </mat-form-field>
      <br></p>
+
+     <p>
+        <mat-form-field>
+          <mat-label>Genres</mat-label>
+          <mat-select matNativeControl ngModel name="type" >
+              <mat-option value="Horror">Horror</mat-option>
+              <mat-option value="Comedt">Comedy</mat-option>
+              <mat-option value="Romance">Romance</mat-option>
+              <mat-option value="Mystry">Mystry</mat-option>
+              <mat-option value="Thriller">Thriller</mat-option>
+            </mat-select>
+
+        </mat-form-field>
+       <br></p>
+<br>
+
+
+
       <button mat-raised-button color="accent" type="submit">Save Show</button>
     </form>
-  </mat-card>
+    
+  
+
+</mat-card>

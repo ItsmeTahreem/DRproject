@@ -9,8 +9,23 @@
             <mat-panel-description>
                 <h3> {{ show.desc }} </h3>
             </mat-panel-description>
-           
-    </mat-expansion-panel-header>
+         
+
+            <mat-panel-description>
+                    <h3> {{ show.type }} </h3>
+                </mat-panel-description>
+             
+          
+                <mat-panel-description>
+                        <h3> {{ show.img }} </h3>
+                    </mat-panel-description>
+                 
+
+  
+    
+</mat-expansion-panel-header>
+
+
         <mat-action-row>
             <button mat-button [routerLink]="['/edit', show._id]" color="primary">EDIT</button>
 

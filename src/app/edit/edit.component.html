@@ -9,6 +9,17 @@
             <label> Show Desc:</label>
             <input matInput type="text" name="desc" ngModel={{show.desc}} required #content="ngModel">
         </mat-form-field>
+
+        <mat-form-field>
+                <label> Show Genre:</label>
+                <mat-select matNativeControl ngModel name="type" >
+                        <mat-option value="Horror">Horror</mat-option>
+                        <mat-option value="Comedt">Comedy</mat-option>
+                        <mat-option value="Romance">Romance</mat-option>
+                        <mat-option value="Mystry">Mystry</mat-option>
+                        <mat-option value="Thriller">Thriller</mat-option>
+                      </mat-select>
+            </mat-form-field>
     
 
         <button mat-raised-button color="accent" type="submit">Edit Show</button>

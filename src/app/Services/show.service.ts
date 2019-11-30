@@ -15,8 +15,8 @@ export class ShowService {
     return this.http.get('http://localhost:4000/api/shows');
   }
 
-  AddShowInformation(name:string,desc:string):Observable<any>{
-    const show:Show = {name:name,desc:desc};
+  AddShowInformation(name:string,desc:string,type:string):Observable<any>{
+    const show:Show = {name:name,desc:desc,type:type,};
     return this.http.post('http://localhost:4000/api/shows', show)
   }
 
@@ -28,8 +28,8 @@ export class ShowService {
     return this.http.get('http://localhost:4000/api/shows/'+id);
   }
 
-  UpdateShows(id:String,name:string,desc:string):Observable<any>{
-    const show:Show = {name:name,desc:desc};
+  UpdateShows(id:String,name:string,desc:string,type:string):Observable<any>{
+    const show:Show = {name:name,desc:desc,type:type,};
     console.log("Edit"+id);
     return this.http.put('http://localhost:4000/api/shows/'+id, show);
   }

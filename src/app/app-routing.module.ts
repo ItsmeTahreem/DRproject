@@ -5,7 +5,8 @@ import {ReadComponent} from './read/read.component'
 import {CreateComponent} from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
+
 
 const routes: Routes = [
   {
@@ -22,12 +23,12 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent
   },
-
-  {
-    path: 'contact',
-    component: ContactComponent
-  },
   
+  {
+    path: 'about',
+    component: AboutComponent
+  },
+
   {
     path:'edit/:id',
     component: EditComponent

@@ -7,13 +7,19 @@
     </mat-toolbar-row>
     <mat-toolbar-row>
 <button mat-button [routerLink]="['/home']">Home</button>
-<button mat-button [routerLink]="['/contact']">Conatact</button>
+<button mat-button [routerLink]="['/about']">About</button>
 <button mat-button [routerLink]="['/create']" color="Warn">Create</button>
 <button mat-button [routerLink]="['/read']">Read</button>
+
 
 </mat-toolbar-row>
 </mat-toolbar>
 <br/><br/>
 
 
+
 <router-outlet></router-outlet>
+
+<div class="footer">
+    <p class="footer-heading">Tv Show Application @tahreem</p>
+  </div>

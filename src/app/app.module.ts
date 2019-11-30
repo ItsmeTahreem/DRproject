@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
- 
+import {MatSelectModule} from '@angular/material/select';
 
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,8 +23,8 @@ import { CreateComponent } from './create/create.component';
 import { FormsModule } from '@angular/forms';
 import { EditComponent } from './edit/edit.component';
 import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
-
+import { AboutComponent } from './about/about.component';
+import { SearchPipe } from './search.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +32,9 @@ import { ContactComponent } from './contact/contact.component';
     CreateComponent,
     EditComponent,
     HomeComponent,
-    ContactComponent
+    AboutComponent,
+    SearchPipe
+  
    
   ],
   imports: [
@@ -49,7 +51,8 @@ import { ContactComponent } from './contact/contact.component';
     MatDatepickerModule,
     MatNativeDateModule,
     FormsModule,
-    NgbModule
+    NgbModule,
+    MatSelectModule
 
 
 

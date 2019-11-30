@@ -11,7 +11,7 @@ import { NgbSlideEvent, NgbSlideEventSource, NgbCarousel} from '@ng-bootstrap/ng
   
 })
 export class HomeComponent implements OnInit {
-  images = [1, 2, 3, 4, 5, 6, 7, 8,].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
+  images = [1, 2, 3, 4, 5, 6,].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
   showNavigationArrows = true;
   showNavigationIndicators = true;
   pauseOnHover = true;
@@ -42,7 +42,12 @@ export class HomeComponent implements OnInit {
   onSlide(slideEvent: NgbSlideEvent) {
     console.log(slideEvent.source);
     console.log(NgbSlideEventSource.ARROW_LEFT);
+    console.log(slideEvent.paused);
     console.log(NgbSlideEventSource.INDICATOR);
     console.log(NgbSlideEventSource.ARROW_RIGHT);
   }
+
+
+
+  
 }

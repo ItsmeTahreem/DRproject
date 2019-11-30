@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
 
+
 <ngb-carousel #mycarousel
 (slide)="onSlide($event)"
 [showNavigationArrows]="true" 
@@ -11,17 +12,11 @@ interval="1500"
 [activeId]="'slideTwo'"
 
 >
-        <ng-template ngbSlide #slide let-slide>
+        <ng-template ngbSlide #slide >
             <div class="picsum-img-wrapper img-style">
-                <img src="./assets/images/glee.jpg" alt="Random first slide">
-            </div>
-            
-        </ng-template>
-        <ng-template ngbSlide>
-                <div class="picsum-img-wrapper">
                         <img src="./assets/images/friends.jpg" alt="Random first slide">
-                    </div>
-                    
+                </div>
+            
         </ng-template>
         <ng-template ngbSlide>
                 <div class="picsum-img-wrapper">
@@ -56,20 +51,15 @@ interval="1500"
                                
                     </ng-template>
 
-                    <ng-template ngbSlide>
-                            <div class="picsum-img-wrapper">
-                                    <img src="./assets/images/stranger.jpeg" alt="Random first slide">
-                                </div>
-                               
-                    </ng-template>
+                 
         </ng-template>
-
-
 
 
     </ngb-carousel >
 
    
+<button class="btnL"     (click)="moveNext()">Next</button>
 
-<button (click)="moveNext()">Next</button>
-<button (click)="getPrev()">Prev</button>
+<button class="btnR" (click)="getPrev()">Prev</button>
+
+

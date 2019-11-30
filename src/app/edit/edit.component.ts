@@ -24,7 +24,7 @@ show:any=[];
   }
   onEditShow(form:NgForm){
     console.log(form.value.name);
-    this.showService.UpdateShows(this.show._id,form.value.name,form.value.desc).
+    this.showService.UpdateShows(this.show._id,form.value.name,form.value.desc,form.value.type).
     subscribe();
   }
 }

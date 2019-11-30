@@ -12,9 +12,12 @@ const Schema = mongoose.Schema;
 
 const showSchema = new Schema({
   name:String,
-  desc:String
+  desc:String,
+  type:String
 
 });
+
+
 
 const ShowModel = mongoose.model('show',showSchema);
 app.use(cors());
@@ -58,12 +61,12 @@ console.log('post Sucessfull');
 console.log(req.body)
 console.log(req.body.name);
 console.log(req.body.desc);
-
+console.log(req.body.type);
 
 ShowModel.create({
   name: req.body.name,
   desc: req.body.desc,
-
+  type: req.body.type,
 
 });
 res.json('data uploaded')
@@ -94,3 +97,4 @@ app.put('/api/shows/:id', (req, res)=>{
 app.listen(PORT, function () {
   console.log('Server is running on Port: ', PORT);
 });
+
