@@ -55,7 +55,7 @@ app.delete('/api/shows/:id', (req, res) => {
 })
 
 
-app.post('/api/shows', (req, res) => { /* Posts data into the consol and into my localhost */
+app.post('/api/shows', (req, res) => { /* Posts data into the consol and into my mongodb */
   console.log('post Sucessfull');
   console.log(req.body)
   console.log(req.body.name);
