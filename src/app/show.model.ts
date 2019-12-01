@@ -1,6 +1,6 @@
 export interface Show {
-    name: string;
-    desc: string;
-    type: string;
-    
-  }
+  name: string;  /* shows name desc type and pickdate  */
+  desc: string;
+  type: string;
+  pickdate: string;
+}

@@ -1,19 +1,15 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'LockFilter'
+  name: 'filter'  // filter uses this string to find characters in the search 
 })
 export class SearchPipe implements PipeTransform {
-
-  transform(value: any, args?: any): any {
-
-    if(!value)return null;
-    if(!args)return value;
-
-    args = args.toLowerCase();
-
-    return value.filter(function(item){
-        return JSON.stringify(item).toLowerCase().includes(args);
+  transform(items: any[], searchText: string): any[] {
+    if (!items) return [];
+    if (!searchText) return items;
+    searchText = searchText.toLowerCase(); // converts all the letters in a string to lowercase 
+    return items.filter(it => {
+      return it.toLowerCase().includes(searchText); // if the letters match when searching the result displays 
     });
-}
+  }
 }

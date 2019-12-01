@@ -1,8 +1,27 @@
 .mat-card{
-position: center;
+position: center; 
 
-}
+}  /*  positions the mat-card to center*/
 
 img {
-    float: left;
+    float: left; /*floats the images to the left side of the page*/
+  }
+
+  .container {
+    padding-top: 50px;              
+    padding-bottom: 10px;
+    color: #405065;
+  }
+  
+  .search-hero {                   
+    max-width: 500px;
+    padding-bottom: 50px;
+    margin:auto;
+  }
+  
+  .form-control {
+    box-shadow: 0 10px 40px 0 #B0C1D9;
+  }
+  .form-control::placeholder  {
+    font-family: FontAwesome;
   }

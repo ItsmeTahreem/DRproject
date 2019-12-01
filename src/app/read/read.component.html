@@ -1,35 +1,36 @@
 <mat-accordion *ngFor="let show of MyShows">
     <mat-expansion-panel [expanded]="true">
         <mat-expansion-panel-header>
+
+            <!-- Shows the name, desc , type and date -->
             <mat-panel-title>
                 <h3> {{ show.name }} </h3><br>
-                
+
             </mat-panel-title>
 
             <mat-panel-description>
-                <h3> {{ show.desc }} </h3>
+                <h3> {{ show.desc }} </h3> <br>
             </mat-panel-description>
-         
+
 
             <mat-panel-description>
-                    <h3> {{ show.type }} </h3>
-                </mat-panel-description>
-             
-          
-                <mat-panel-description>
-                        <h3> {{ show.img }} </h3>
-                    </mat-panel-description>
-                 
+                <h3> {{ show.type }} </h3><br>
+            </mat-panel-description>
 
-  
-    
-</mat-expansion-panel-header>
+
+            <mat-panel-description>
+                <h3> {{ show.pickdate }} </h3><br>
+            </mat-panel-description>
+
+
+        </mat-expansion-panel-header>
 
 
         <mat-action-row>
             <button mat-button [routerLink]="['/edit', show._id]" color="primary">EDIT</button>
+            <!--edit button take you to the edit page where you can edit name , desc , type or date -->
 
-            <button mat-button (click)="onDelete(show._id)" color="warn">DELETE</button>
+            <button mat-button (click)="onDelete(show._id)" color="warn">DELETE</button> <!-- Deletes the saved show-->
         </mat-action-row>
     </mat-expansion-panel>
 </mat-accordion>

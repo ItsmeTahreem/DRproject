@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from "@angular/forms";
 import { ShowService } from '../Services/show.service';
-import {FormControl} from '@angular/forms';
+import { FormControl } from '@angular/forms';
 
 
 
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
-  
+
   styleUrls: ['./create.component.css']
 })
 export class CreateComponent implements OnInit {
@@ -19,9 +19,8 @@ export class CreateComponent implements OnInit {
   }
 
   onAddShow(form: NgForm) {
-   
-    if(!form.valid)
-    {
+
+    if (!form.valid) {
       return;
     }
 
@@ -29,14 +28,14 @@ export class CreateComponent implements OnInit {
 
 
 
-    this.showService.AddShowInformation(form.value.name,form.value.desc,form.value.type).subscribe(
-        ()=>{
-        }
-      );
+    this.showService.AddShowInformation(form.value.name, form.value.desc, form.value.type, form.value.pickdate).subscribe(
+      () => {
+      }   /*this shows the information from these values */
+    );
     console.log(form.value);
-   
+
   }
 
-  
+
 
 }

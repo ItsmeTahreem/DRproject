@@ -1,65 +1,55 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<!--Link to bootstrap stylesheet-->
 
-
-<ngb-carousel #mycarousel
-(slide)="onSlide($event)"
-[showNavigationArrows]="true" 
-[showNavigationIndicators]="true"
-interval="1500"
-[keyboard]="true"
-[pauseOnHover]="true"
-[wrap]="true"
-[activeId]="'slideTwo'"
-
->
-        <ng-template ngbSlide #slide >
-            <div class="picsum-img-wrapper img-style">
+<ngb-carousel #mycarousel (slide)="onSlide($event)" [showNavigationArrows]="true" [showNavigationIndicators]="true"
+        interval="1500" [keyboard]="true" [pauseOnHover]="true" [wrap]="true" [activeId]="'slideTwo'">
+        <ng-template ngbSlide #slide>
+                <!-- image carousel displays images with 5s interval -->
+                <div class="picsum-img-wrapper img-style">
                         <img src="./assets/images/friends.jpg" alt="Random first slide">
                 </div>
-            
+
         </ng-template>
         <ng-template ngbSlide>
                 <div class="picsum-img-wrapper">
-                        <img src="./assets/images/bigbang.jpg" alt="Random first slide">
-                    </div>
-                   
+                        <img src="./assets/images/bigbang.jpg" alt="Random second slide">
+                </div>
+
         </ng-template>
         <ng-template ngbSlide>
                 <div class="picsum-img-wrapper">
-                        <img src="./assets/images/friends.jpg" alt="Random first slide">
-                    </div>
-                   
+                        <img src="./assets/images/friends.jpg" alt="Random third slide">
+                </div>
+
         </ng-template>
         <ng-template ngbSlide>
                 <div class="picsum-img-wrapper">
-                        <img src="./assets/images/lost.jpg" alt="Random first slide">
-                    </div>
-                    
+                        <img src="./assets/images/lost.jpg" alt="Random fourth slide">
+                </div>
 
 
-                    <ng-template ngbSlide>
-                            <div class="picsum-img-wrapper">
-                                    <img src="./assets/images/mother.jpg" alt="Random first slide">
-                                </div>
-                                
-                    </ng-template>
 
-                    <ng-template ngbSlide>
-                            <div class="picsum-img-wrapper">
-                                    <img src="./assets/images/power.jpg" alt="Random first slide">
-                                </div>
-                               
-                    </ng-template>
+                <ng-template ngbSlide>
+                        <div class="picsum-img-wrapper">
+                                <img src="./assets/images/mother.jpg" alt="Random fifth slide">
+                        </div>
 
-                 
+                </ng-template>
+
+                <ng-template ngbSlide>
+                        <div class="picsum-img-wrapper">
+                                <img src="./assets/images/power.jpg" alt="Random sixth slide">
+                        </div>
+
+                </ng-template>
+
+
         </ng-template>
 
 
-    </ngb-carousel >
-
-   
-<button class="btnL"     (click)="moveNext()">Next</button>
-
-<button class="btnR" (click)="getPrev()">Prev</button>
+</ngb-carousel>
 
 
+<button class="btnL" (click)="moveNext()">Next</button> <!-- Next button takes you to the next image-->
+
+<button class="btnR" (click)="getPrev()">Prev</button> <!-- Prev button takes you to the previous image-->

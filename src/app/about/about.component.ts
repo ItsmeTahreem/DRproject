@@ -5,14 +5,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
- 
- 
+
+
   constructor() { }
 
-  ngOnInit(){
-    
+  ngOnInit() {
 
-}
+
+  }
+
+  name = 'Angular';
+  characters = [   /** Array of Characters */
+    'How I Met Your Mother ',
+    'Friends',
+    'The Big Bang Theory',
+    'The New Glee',
+    'Lost',
+    'Stranger Things'
+  ]
+
 
 
 }

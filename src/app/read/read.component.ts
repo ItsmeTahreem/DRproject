@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ShowService } from '../Services/show.service';
-import {Router, ActivatedRoute} from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-read',
@@ -10,6 +10,7 @@ import {Router, ActivatedRoute} from '@angular/router';
 export class ReadComponent implements OnInit {
   MyShows: any = [];
   constructor(private showService: ShowService) { }
+  /* constructor Displays shows with matching ID for ngoninit*/
 
   ngOnInit() {
     this.showService.GetShowInformation().subscribe((data) => {
@@ -17,11 +18,11 @@ export class ReadComponent implements OnInit {
       console.log(this.MyShows);
     })
   }
-
-  onDelete(id:String){
-    console.log("Deleting show with id: "+id);
+  /**Method that deletes the show with the id */
+  onDelete(id: String) {
+    console.log("Deleting show with id: " + id);
     this.showService.DeleteShow(id).subscribe(
-      ()=>{
+      () => {
         this.ngOnInit();
       }
     );

@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {MatSelectModule} from '@angular/material/select';
-
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
@@ -15,8 +15,8 @@ import {
   MatButtonModule,
   MatToolbarModule,
   MatExpansionModule,
-  MatNativeDateModule,
-  MatDatepickerModule
+  MatNativeDateModule
+
 } from '@angular/material';
 import { ReadComponent } from './read/read.component';
 import { CreateComponent } from './create/create.component';
@@ -34,10 +34,10 @@ import { SearchPipe } from './search.pipe';
     HomeComponent,
     AboutComponent,
     SearchPipe
-  
-   
+
+
   ],
-  imports: [
+  imports: [ /* all the imports needed imported here */
     MatFormFieldModule,
     MatInputModule,
     BrowserModule,

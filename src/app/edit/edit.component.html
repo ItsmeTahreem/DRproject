@@ -3,25 +3,33 @@
         <mat-form-field>
             <label> Show Name:</label>
             <input matInput type="text" name="name" ngModel={{show.name}} required #title="ngModel">
+            <!--This shows the title and description of a tv show-->
         </mat-form-field>
-
+        <br>
         <mat-form-field>
             <label> Show Desc:</label>
             <input matInput type="text" name="desc" ngModel={{show.desc}} required #content="ngModel">
         </mat-form-field>
-
+        <br>
         <mat-form-field>
-                <label> Show Genre:</label>
-                <mat-select matNativeControl ngModel name="type" >
-                        <mat-option value="Horror">Horror</mat-option>
-                        <mat-option value="Comedt">Comedy</mat-option>
-                        <mat-option value="Romance">Romance</mat-option>
-                        <mat-option value="Mystry">Mystry</mat-option>
-                        <mat-option value="Thriller">Thriller</mat-option>
-                      </mat-select>
-            </mat-form-field>
-    
+            <label> Show Genre:</label> <!-- This edits the gendre list that displays multiple genre options  -->
+            <mat-select matNativeControl ngModel name="type">
+                <mat-option value="Horror">Horror</mat-option>
+                <mat-option value="Comedt">Comedy</mat-option>
+                <mat-option value="Romance">Romance</mat-option>
+                <mat-option value="Mystry">Mystry</mat-option>
+                <mat-option value="Thriller">Thriller</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input ngModel name="pickdate" matInput [matDatepicker]="picker" placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field> <!-- date picker shows the date you picked -->
+
 
         <button mat-raised-button color="accent" type="submit">Edit Show</button>
+        <!--Edit button submits the edits made-->
     </form>
 </mat-card>
